@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio Website</title>
+	<!---custom css link---->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #2a2a2a;
+    --second-bg-color: #202020;
+    --text-color: #fff;
+    --second-color: #ccc;
+    --main-color: #05b4ff;
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 22px 15%;
+    border-bottom: 1px solid transparent;
+    transition: all .45s ease;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: var(--second-color);
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 25px;
+    transition: all .45s ease;
+}
+
+.navlist a:hover {
+    color: var(--main-color);
+}
+
+.navlist a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 1000;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+section {
+    padding: 160px 15% 120px;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.slide {
+    margin-bottom: 20px;
+}
+
+.one {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 0 15px;
+    line-height: 32px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+.two {
+    display: inline-block;
+    color: var(--second-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.home-text h1 {
+    font-size: var(--big-font);
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.1;
+    margin: 0 0 8px;
+
+}
+
+.home-text h3 {
+    color: var(--text-color);
+    margin: 0 0 35px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.home-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.button {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px;
+    background: var(--main-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: all .45s ease;
+}
+
+#myImage {
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    margin-top: 100px;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-img img {
+    max-width: 530px;
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+
+.about-text h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.8;
+    margin-bottom: 4rem;
+}
+
+.services {
+    background: var(--second-bg-color);
+
+}
+
+.main-text {
+    text-align: center;
+}
+
+.main-text p {
+    color: var(--second-color);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.main-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+.box {
+    background: var(--bg-color);
+    padding: 35px 45px;
+    border-radius: 8px;
+    transition: all .45s ease;
+}
+
+.s-icons i {
+    font-size: 32px;
+    margin-bottom: 20px;
+
+}
+
+.box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.box p {
+    color: var(--second-color);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    cursor: pointer;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), #500e46);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    font: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: var(--second-color);
+    font-size: 1rem;
+    line-height: 1.8;
+
+}
+
+.layer i {
+    color: var(--main-color);
+    margin-top: 20px;
+    font-size: 20px;
+    background: var(--text-color);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.row:hover img {
+    transform: scale(1.1);
+
+}
+
+.row:hover .layer {
+    height: 100%;
+}
+
+.contact {
+    background: var(--second-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.contact-text h4 {
+    color: var(--text-color);
+    margin: 18px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+
+.contact-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.list {
+    margin-bottom: 2.8rem;
+
+}
+
+.list li {
+    margin-bottom: 12px;
+
+}
+
+.list li a {
+    display: block;
+    color: var(--second-color);
+    font-size: 14px;
+    transition: all .45s ease;
+}
+
+.list li a:hover {
+    color: var(--text-color);
+    transform: translateY(5px);
+
+}
+
+.contact-icons i {
+    height: 45px;
+    width: 45px;
+    color: var(--text-color);
+    font-size: 22px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 15px;
+    transition: all .45s ease;
+}
+
+.contact-icons i:hover {
+
+    color: var(--main-color);
+}
+
+.contact-form form {
+    position: relative;
+}
+
+.contact-form form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 240px;
+}
+
+.contact-form .submit {
+    display: inline-block;
+    font-size: 16px;
+    background: var(--main-color);
+    color: var(--text-color);
+    width: 160px;
+    transition: all .45s ease;
+}
+
+.contact-form .submit:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.end {
+    padding: 20px 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--bg-color);
+}
+
+.last-text p {
+    color: var(--second-color);
+    font-size: 14px;
+
+}
+
+.top i {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--text-color);
+    background: var(--main-color);
+}
+
+@media (max-width: 1480px) {
+    header {
+        padding: 12px 2.5%;
+        transition: .1s;
+    }
+
+    section {
+        padding: 110px 3% 60px;
+    }
+
+    .end {
+        padding: 15px 3%;
+    }
+}
+@media (max-width: 1100px){
+    :root{
+        --big-font:4rem;
+        --h2-font:2.5rem;
+        --p-font:1rem;
+        transition: .1s;
+    }
+    .home-text h3{
+        font-size: 2.5rem;
+    }
+    .home{
+        height: 87vh;
+    }
+}
+@media (max-width:920){
+    .about{
+        grid-template-columns: 1fr;
+
+    }
+    .about-img img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    .contact{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        transition: all .45s ease;
+
+    }
+    .navlist a{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: var(--text-color);
+
+    }
+    .navlist a:hover{
+        color: var(--main-color);
+    }
+    navlist a.active{
+        color: var(--text-color);
+    }
+    .navlist.open{
+        top: 100%;
+    }
+}
+
+.last-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+#installer {
+  width: 200px;
+  height: 40px;
+}
+
+#installer label {
+  position: absolute;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#installer label input {
+  display: none;
+}
+
+#installer label span {
+  position: absolute;
+  height: 40px;
+  width: 200px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background: #3F8EFC;
+  border-radius: 5px;
+}
+
+#installer label input:checked ~ span {
+  background: #87E544;
+  animation: downloadSuccess 3.1s ease;
+}
+
+#installer label span:after {
+  content: 'DOWNLOAD CV';
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  left: 10%;
+}
+
+#installer label input:checked ~ span:after {
+  content: 'Thank you!';
+  animation: downloadState 3s;
+}
+
+#installer label span:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  background: rgba(255,255,255,.2);
+}
+
+#installer label input:checked ~ span:before {
+  animation: downloadProgress 3s cubic-bezier(.67,.13,.1,.81);
+}
+
+.home{
+    display:flex;
+    justify-content: space-between;
+}
+
+@keyframes downloadSuccess {
+  0%, 90% {
+    background: #3F8EFC;
+  }
+
+  100% {
+    background: #87E544;
+  }
+}
+
+@keyframes downloadState {
+  0%, 95% {
+    content: 'DOWNLOADING...'
+  }
+
+  100% {
+    content: 'Thank you for download!'
+  }
+}
+
+@keyframes downloadProgress {
+  0% {
+    width: 5%;
+    opacity: 1;
+  }
+
+  35% {
+    width: 17%;
+  }
+
+  64% {
+    width: 51%;
+  }
+
+  81% {
+    width: 70%;
+  }
+
+  90% {
+    width: 86%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+</style>
+</head>
+	<link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<body>
+	<!------Header Section------>
+	<header>
+		<a href="#" class="logo">Devlo<span>pe</span>r..</a>
+		<ul class="navlist">
+			<li><a href="#home"><b>Home</b></a></li>
+			<li><a href="#about"><b>About Me</b></a></li>
+			<li><a href="#services"><b>Services</b></a></li>
+			<li><a href="#contact"><b>Contact</b></a></li>
+		</ul>
+		<div class="bx bx-menu" id="menu-icon"></div>
+	</header>
+
+	<!---------Home Section--------------->
+	<section class="home" id="home">
+		<div class="home-text">
+			<div class="slide">
+				<span class="one">Hello</span>
+				<span class="two">I'm</span>
+			</div>
+			<h1>Prachi</h1>
+			<h3>Website <span>Designer.</span></h3>
+			<p>Web Developer with 2+ years experience that keep customers <br> coming for about services make best effort.</p>
+			<div class="button">
+				<a href="#" class="btn">About Me</a>
+			</div>
+		</div>
+        <div class="home-text">
+            <img src="C:\Users\Prachi\Downloads\prachi image.jpeg" alt="prachi" id="myImage"></img>
+        </div>
+	</section>
+
+	<!---------about Section --------------->
+	<section class="about" id="about">
+		<div class="about-img">
+			
+		</div>
+
+		<div class="about-text">
+			<h2>About Me</h2>
+			<h4>Website Designer!</h4>
+			<p>Check out 5 Best Design updates for the top web design & development 
+				companies for your needs by reviewing our list & development companies! 
+				Find the best web design. Web Design Consulting. Comprehensive Directory. 
+				Top Reviewed Design Firms. Types: Enterprise Design Firms, Startup Design 
+				Firms, Custom Design Firms, eCommerce Design Firms, and App Design Firms. 
+				Custom Web Solution. 24x7 Customer Support. Secure Payment Gateway. 
+				Get A Free Web Quote. 24/7 Chat Support. Services: Web Page Design, 
+				Landing Page Design, App development, Mobile Website Design.
+				</p>
+				<a href="#" class="btn">More About</a>
+		</div>
+	</section>
+
+	<!-----------Services Section-------------->
+	<section class="services" id="services">
+	<div class="main-text">
+		<h2><span>My</span>Services</h2>
+	</div>
+	<div class="services-content">
+		<div class="box">
+			<div class="s-icons">
+				<i class='bx bx-mobile-alt'></i>
+			</div>
+			<h3>Web Design</h3>
+			<p>One Way to categories the activities is in terms of the professional's area of experience such as competitive analysis, corporate stragety.</p>
+			<a href="#" class="btn">Read More</a>
+		</div>
+
+		<div class="box">
+			<div class="s-icons">
+				<i class='bx bx-code-alt'></i>
+			</div>
+			<h3>Creative Design</h3>
+			<p>One Way to categories the activities is in terms of the professional's area of experience such as competitive analysis, corporate stragety.</p>
+			<a href="#" class="btn">Read More</a>
+		</div>
+
+		
+	</div>
+
+</section>
+
+
+
+<!------------------Contact section------------>
+<section class="contact" id="contact">
+	<div class="contact-text">
+		<h2>Contact <span>Me!</span></h2>
+		<h4>If you have any project in your mind.</h4>
+		<p>I'm a website Designer - creating bold & brave interface design for companies all across the world.</p>
+		<div class="list">
+			<li><a href="#">6284383478</a></li>
+			<li><a href="#">prachi1095.be23@chitkara.edu.in</a></li>
+			<li><a href="#">Like Share & Subscribe</a></li>
+		</div>
+
+		<div class="contact-icons">
+           
+                
+			<a href="https://www.facebook.com/ritu.jindal.3367?mibextid=9R9pXO"><i class="bx bxl-facebook"></i></a>
+			<a href="https://instagram.com/prachijindal55?igshid=NzZlODBkYWE4Ng=="><i class='bx bxl-instagram-alt' ></i></a>
+			<a href="https://youtube.com/@prachijindal6979?si=EPhbt9S7zGhB_kgH"><i class='bx bxl-youtube'></i></a>
+            
+      
+		</div>
+
+	</div>
+	<div class="contact-form">
+		<form action="">
+			<input type="name" placeholder="Your Name " required>
+			<input type="email" placeholder="Your Email " required>
+			<input type="number" placeholder="your Mobile Number" required>
+			<textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You " required></textarea>
+			<input type="submit" value="Send Message" class="submit" required>
+		</form>
+
+	</div>
+</section>
+
+<!---------End Section---------->
+<section class="end">
+	<div class="last-text">
+		<p>Design By Prachi</p>
+	</div>
+    <div class="last-text" id="installer">
+        <label for="progressLinux"><input id="progressLinux" type="radio"><span></span></label>
+    </div>
+</section>
+      </div>
+        </div>
+
+</body>
+
+</html>
