@@ -104,6 +104,8 @@ form .btn .inner{
   background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
   transition: all 0.4s;
 }
+
+
 form .btn:hover .inner{
   left: 0;
 }
@@ -114,7 +116,7 @@ form .btn button{
   border: none;
 
 
-  
+
   color: #fff;
   font-size: 18px;
   font-weight: 500;
