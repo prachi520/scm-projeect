@@ -1,0 +1,361 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    background: linear-gradient(20deg, black, rgba(91, 69, 123, 0.758));
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background: linear-gradient(60deg, #ff375f, #00a7ff);
+    padding: 20px 0;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin: 0 0 1rem 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    margin-bottom: 5px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: relative;
+  }
+  
+  nav a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  nav a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  section {
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+  }
+  
+  .futuristic-section {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skill {
+    background: #00a7ff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .skill:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ff375f;
+    transition: all 0.3s ease;
+  }
+  
+  .skill:hover:before {
+    width: 100%;
+  }
+  
+  .project {
+    margin-bottom: 20px;
+    background: rgba(0, 0, 80, 0.1);
+    padding: 20px;
+  }
+  
+  .project h3 {
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    margin-bottom: 20px;
+  }
+  
+  .project a {
+    color: #00a7ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .project a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #fff;
+    background: rgba(0, 0, 0, 0.9);
+    margin-top: 10px;
+  }
+  
+  .view-project {
+    color: #00a7ff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .view-project:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ff375f;
+    transition: all 0.3s ease;
+  }
+  
+  .view-project.hover:before {
+    width: 100%;
+  }
+  
+  .view-project {
+    color: #00a7ff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .view-project:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ff375f;
+    transition: all 0.3s ease;
+  }
+  
+  .view-project.hover:before {
+    width: 100%;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  #photo img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+  }
+  
+  .profile-photo {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+    width: 200px; 
+  }
+  
+  
+  header {
+    text-align: center;
+  }
+  
+  header h1 {
+    margin-top: 10px;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+  }
+  
+  nav a:hover {
+    background-color: #ff375f;
+    border-radius: 5px;
+  }
+  
+  .profile-photo {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    width: 200px; 
+  }
+  
+  
+  header {
+    text-align: center;
+  }
+  
+  header h1 {
+    margin-top: 10px;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+  }
+  
+  nav a:hover {
+    background-color: #ff375f;
+    border-radius: 5px;
+  }
+  
+  header.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    animation: slide-down 0.5s;
+  }
+  
+  @keyframes slide-down {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Modern navigation effect */
+  nav a {
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    transition: background 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    background: #ff375f;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+ #typing-intro{
+    text-align: center;
+ }
+
+ /* Add this to your existing CSS */
+#photo.animate-photo img {
+  animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+  
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  #progress-bar .progress-bar {
+    background-color: #ff375f;
+    transition: width 0.3s ease;
+  }
+  
+  
+  
